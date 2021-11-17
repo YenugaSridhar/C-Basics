@@ -1,13 +1,12 @@
 #include<stdio.h>
-#include<limits.h>
 void main()
 {
-	 printf("Short int:\nSigned: %hd to %hd\n", SHRT_MIN, SHRT_MAX);
-	 printf("Unsigned: %d to %hu\n",0,USHRT_MAX);
-	 printf("int:\nSigned: %d to %d\n", INT_MIN, INT_MAX);
-	 printf("Unsigned: %u to %u\n",0,UINT_MAX);
-	 printf("Long int:\nSigned: %ld to %ld\n",LONG_MIN, LONG_MAX);
-	 printf("Unsigned: %lu to %lu\n",0,ULONG_MAX);
-	 printf("Long Long int:\nSigned: %lld to %lld\n", LONG_LONG_MIN,LONG_LONG_MAX);
-	 printf("Unsigned: %llu to %llu",0,ULONG_LONG_MAX);
+	int x, y, z;
+	x = 10, y = 4, z = 3;
+	x += y; //14 4 3
+	y -= z; //14 1 3
+	z += x; //14 1 17
+	y *= x; //14 14 17
+	x *= z; //238 14 17
+	printf("%d %d %d", x, y, z);
 }
